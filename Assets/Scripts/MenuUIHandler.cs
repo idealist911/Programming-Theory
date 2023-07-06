@@ -6,13 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuUIHandler : MonoBehaviour
 {
-    Dictionary<string, int> scenes = new Dictionary<string, int>()
-    {
-        { "Title", 0 },
-        { "Main", 1 },
-        { "NewGame", 2 }
-    };
-
     Button newGameButton;
     Button playGameButton;
     Button quitGameButton;
@@ -36,12 +29,12 @@ public class MenuUIHandler : MonoBehaviour
 
     void CreateNewGame()
     {
-        SceneManager.LoadScene(scenes["NewGame"]);
+        SceneManager.LoadScene(GameManager.scenes["NewGame"]);
     }
 
     void PlayGame()
     {
-        SceneManager.LoadScene(scenes["Main"]);
+        SceneManager.LoadScene(GameManager.scenes["Main"]);
     }
 
     void QuitGame()
